@@ -1,6 +1,6 @@
 package com.myapp.close_contact_app.model;
 
-public class Name {
+public class Name extends Person{
     
     private String firstName;
     private String middleName;

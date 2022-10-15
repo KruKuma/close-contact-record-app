@@ -2,15 +2,35 @@ package com.myapp.close_contact_app.model;
 
 import java.util.Date;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Contact {
+    
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    
     private int PersonId1;
     private int PersonId2;
     private Date dateContact;
     
+    /**
+     * @param personId1
+     * @param personId2
+     * @param dateContact
+     */
     public Contact(int personId1, int personId2, Date dateContact) {
+        super();
         PersonId1 = personId1;
         PersonId2 = personId2;
         this.dateContact = dateContact;
+    }
+
+    public Contact() {
+        super();
     }
 
     /**
@@ -54,11 +74,7 @@ public class Contact {
     public void setDateContact(Date dateContact) {
         this.dateContact = dateContact;
     }
-
-    @Override
-    public String toString() {
-        return "Contact [PersonId1=" + PersonId1 + ", PersonId2=" + PersonId2 + ", dateContact=" + dateContact + "]";
-    }
+    
     
     
 }

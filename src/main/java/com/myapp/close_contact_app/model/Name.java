@@ -1,5 +1,8 @@
 package com.myapp.close_contact_app.model;
 
+import javax.persistence.Entity;
+
+@Entity
 public class Name extends Person{
     
     private String firstName;

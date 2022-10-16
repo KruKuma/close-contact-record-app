@@ -1,6 +1,24 @@
 package com.myapp.close_contact_app.model;
 
-public class Person {
+import java.io.Serializable;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
+import javax.persistence.Table;
+
+@Entity
+@Table
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+
+public class Person implements Serializable {
+    
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    
     private Name name;
     private String phone;
     private String email;

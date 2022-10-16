@@ -1,5 +1,8 @@
 package com.myapp.close_contact_app.model;
 
+import javax.persistence.Entity;
+
+@Entity
 public class Patient extends Person {
     
     private int pid;
@@ -7,14 +10,17 @@ public class Patient extends Person {
     
     /**
      * @param pid
-     * @param name
+     * @param patient
      */
-    public Patient(int pid, String firstName, String middleName, String lastName) {
+    public Patient(int pid, Name patient) {
         super();
         this.pid = pid;
-        patient = new Name(firstName, middleName, lastName);
+        this.patient = patient;
     }
 
+    /**
+     * 
+     */
     public Patient() {
         super();
     }
@@ -34,17 +40,19 @@ public class Patient extends Person {
     }
 
     /**
-     * @return the name
+     * @return the patient
      */
-    public String getName() {
-        return patient.toString();
+    public Name getPatient() {
+        return patient;
     }
 
     /**
-     * @param name the name to set
+     * @param patient the patient to set
      */
-    public void setName(String firstName, String middleName, String lastName) {
-        patient = new Name(firstName, middleName, lastName);
+    public void setPatient(Name patient) {
+        this.patient = patient;
     }
+    
+    
     
 }

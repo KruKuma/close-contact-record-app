@@ -6,7 +6,7 @@ import javax.persistence.Entity;
 public class Patient extends Person {
     
     private int pid;
-    Name patient;
+    private Name patient;
     
     /**
      * @param pid

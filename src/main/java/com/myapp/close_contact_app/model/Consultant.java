@@ -6,7 +6,7 @@ import javax.persistence.Entity;
 public class Consultant extends Person {
     
     private int cid;
-    Name consultant;
+    private Name consultant;
     
     public Consultant(int cid, Name consultant) {
         super();

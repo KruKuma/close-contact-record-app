@@ -52,7 +52,10 @@ public class Patient extends Person {
     public void setPatient(Name patient) {
         this.patient = patient;
     }
-    
-    
+
+    @Override
+    public String toString() {
+        return "Patient [pid=" + pid + ", patient=" + patient + "]";
+    }
     
 }

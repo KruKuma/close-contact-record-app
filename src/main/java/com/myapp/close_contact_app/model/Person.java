@@ -8,11 +8,10 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table
-@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 public class Person implements Serializable {
     
     @Id
@@ -21,6 +20,8 @@ public class Person implements Serializable {
     private int id;
     private String phone;
     private String email;
+    
+    @OneToOne
     private Name name;
     
     /**
